@@ -1,0 +1,26 @@
+.table {
+  flex: 2;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+
+.table-events {
+  flex: 1;
+}
+
+.table-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: wrap;
+  }
+  .table {
+    width: 100%;
+  }
+}

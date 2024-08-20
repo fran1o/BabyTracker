@@ -1,0 +1,17 @@
+.form {
+	flex: 1;
+	border-radius: 8px;
+	padding: 20px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	margin-top: 20px;
+}
+
+.event-form {
+	flex: 1;
+}
+
+@media (max-width: 768px) {
+	.form {
+		width: 100%;
+	}
+}

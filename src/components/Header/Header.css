@@ -1,0 +1,157 @@
+.event {
+	font-size: 0.8em;
+	padding: 6px;
+	border-bottom: 1px solid #eee;
+	max-width: 90%;
+	word-wrap: break-word;
+}
+
+.events {
+	border: 0;
+	border-radius: 0.5rem;
+	box-shadow: 0 10px 15px -3px rgba(0, 0, 0, .07), 0 4px 6px -2px rgba(0, 0, 0, .05);
+	font-size: .875rem;
+	max-height: 300px;
+	width: 250px;
+	overflow-y: auto;
+	position: absolute;
+	z-index: 1066;
+	right: 15px;
+	top: 10%;
+	transform: none;
+}
+
+.notification-wrapper {
+	position: relative;
+	cursor: pointer;
+	width: inline-block;
+}
+
+.notification-count {
+	position: absolute;
+	top: 0;
+	right: 0;
+	transform: translate(50%, -50%);
+	background-color: #dc3545;
+	color: white;
+	border-radius: 50%;
+	font-size: 0.75em;
+	padding: 3px 6px;
+}
+
+.notification-card {
+	margin-bottom: 10px;
+	border: 1px solid #ddd;
+	box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+	border-radius: 8px;
+	transition: transform 0.2s ease-in-out;
+	width: 100%;
+	min-width: 200px;
+	max-width: 300px;
+}
+
+.notification-card:hover {
+	transform: translateY(-2px);
+	box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+	cursor: pointer;
+	background: #f8f9fa;
+}
+
+.card-body {
+	padding: 10px;
+}
+
+.card-title {
+	font-size: 1.2em;
+	margin-bottom: 10px;
+	color: #333;
+}
+
+.card-text {
+	font-size: 0.9em;
+	color: #666;
+}
+
+.header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 10px;
+	box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+}
+
+.header-title {
+	color: #333;
+	vertical-align: middle;
+}
+
+.search-box {
+	background: #eee;
+	padding: 0 10px;
+	border-radius: 4px;
+	display: flex;
+	gap: 10px;
+	align-items: center;
+	vertical-align: middle;
+	margin-left: calc(50% - 200px);
+	cursor: pointer;
+}
+
+.search-box.search-icon {
+	padding: 10px;
+	background: transparent;
+}
+
+.search-box input {
+	padding: 10px;
+	background: transparent;
+}
+
+.user-box {
+	display: flex;
+	align-items: center;
+	gap: 20px;
+	cursor: pointer;
+}
+
+.user-box.user--icon {
+	background: #eee;
+	padding: 10px;
+	cursor: pointer;
+}
+
+.user--icon:hover {
+	color: #333;
+	background: #eee;
+	box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+	border-radius: 50%;
+	transition: all 0.5s ease-in;
+}
+
+button {
+	background: bisque;
+	padding: 10px;
+	border-radius: 4px;
+	font-weight: 500;
+}
+
+@media (max-width: 860px) {
+	.search-box {
+		display: none;
+	}
+
+	.user-box button {
+		display: none;
+	}
+}
+
+@media (max-width: 500px) {
+	.header-title {
+		display: none;
+	}
+
+	.user-box {
+		width: 100%;
+		justify-content: flex-end;
+	}
+}

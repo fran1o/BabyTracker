@@ -1,0 +1,52 @@
+image: node:22.4.1
+
+stages:
+  - build
+  - deploy
+
+cache:
+  paths:
+    - node_modules/
+
+build-pages:
+  stage: build
+  script:
+    - rm -rf build
+    - CI=false npm install
+    - CI=false npm run build
+    - rm -rf public
+    - cp build/index.html build/404.html
+    - mv build public
+  artifacts:
+    paths:
+      - public
+#  only:
+   # - master
+
+pages:
+  stage: deploy
+  script:
+    - echo 'Deploying'
+  artifacts:
+    paths:
+      - public
+#  only:
+   # - master
+
+run-app:
+  stage: run
+  script:
+    - echo 'Running the baby-tracker app'
+  only:
+    - master
+
+deploy-app:
+  stage: deploy
+  script:
+    - ls
+    - echo 'Deploying the baby-tracker app'
+  artifacts:
+    paths:
+      - public
+  only:
+    - master
