@@ -76,6 +76,7 @@ const Header = () => {
   };
 
   console.log(user)
+  console.log('UserInfo:', userInfo); // Verifica el valor de userInfo
 
   return (
     <>
@@ -101,7 +102,7 @@ const Header = () => {
               ))}
             </div>
           )}
-          {user ? (
+          {localStorage.getItem("user") ? (
             <p className="text-center pt-3">Bienvenido</p>
           ) : (
             <Link to='/login'>
