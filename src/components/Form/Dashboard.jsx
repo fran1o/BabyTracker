@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Button, Card, Modal, Spinner } from "react-bootstrap";
 import { useSelector } from "react-redux";
-import babyTrackerImage from '../../assets/images/baby-tracker-KnS9ZnlS.png';
+import babyTrackerImage from '../../assets/baby-tracker-KnS9ZnlS.png';
 import ActivityChart from "../Charts/ActivityChart";
 import MealChart from "../Charts/MealChart";
 import ChartContainer from "../Container/ChartContainer";
